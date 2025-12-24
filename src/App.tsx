@@ -3,8 +3,20 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
+import SignIn from "./pages/SignIn";
 import NotFound from "./pages/NotFound";
+import AdminLayout from "./layouts/AdminLayout";
+import CustomerLayout from "./layouts/CustomerLayout";
+import AdminDashboard from "./pages/admin/Dashboard";
+import AdminRooms from "./pages/admin/Rooms";
+import AdminMenu from "./pages/admin/Menu";
+import AdminBookings from "./pages/admin/Bookings";
+import AdminServices from "./pages/admin/Services";
+import CustomerRooms from "./pages/customer/Rooms";
+import CustomerBookings from "./pages/customer/Bookings";
+import CustomerFood from "./pages/customer/Food";
+import CustomerServices from "./pages/customer/Services";
+import CustomerCheckout from "./pages/customer/Checkout";
 
 const queryClient = new QueryClient();
 
@@ -15,8 +27,26 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/" element={<SignIn />} />
+          
+          {/* Admin Routes */}
+          <Route path="/admin" element={<AdminLayout />}>
+            <Route path="dashboard" element={<AdminDashboard />} />
+            <Route path="rooms" element={<AdminRooms />} />
+            <Route path="menu" element={<AdminMenu />} />
+            <Route path="bookings" element={<AdminBookings />} />
+            <Route path="services" element={<AdminServices />} />
+          </Route>
+
+          {/* Customer Routes */}
+          <Route path="/customer" element={<CustomerLayout />}>
+            <Route path="rooms" element={<CustomerRooms />} />
+            <Route path="bookings" element={<CustomerBookings />} />
+            <Route path="food" element={<CustomerFood />} />
+            <Route path="services" element={<CustomerServices />} />
+            <Route path="checkout" element={<CustomerCheckout />} />
+          </Route>
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
