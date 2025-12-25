@@ -2,6 +2,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import {
   Hotel,
+  Home,
   Search,
   CalendarCheck,
   UtensilsCrossed,
@@ -18,6 +19,7 @@ interface CustomerSidebarProps {
 }
 
 const navItems = [
+  { path: '/customer', label: 'Home', icon: Home },
   { path: '/customer/rooms', label: 'Browse Rooms', icon: Search },
   { path: '/customer/bookings', label: 'My Bookings', icon: CalendarCheck },
   { path: '/customer/food', label: 'Order Food', icon: UtensilsCrossed },
