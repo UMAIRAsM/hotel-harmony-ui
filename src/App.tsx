@@ -12,6 +12,7 @@ import AdminRooms from "./pages/admin/Rooms";
 import AdminMenu from "./pages/admin/Menu";
 import AdminBookings from "./pages/admin/Bookings";
 import AdminServices from "./pages/admin/Services";
+import CustomerHome from "./pages/customer/Home";
 import CustomerRooms from "./pages/customer/Rooms";
 import CustomerBookings from "./pages/customer/Bookings";
 import CustomerFood from "./pages/customer/Food";
@@ -40,6 +41,7 @@ const App = () => (
 
           {/* Customer Routes */}
           <Route path="/customer" element={<CustomerLayout />}>
+            <Route index element={<CustomerHome />} />
             <Route path="rooms" element={<CustomerRooms />} />
             <Route path="bookings" element={<CustomerBookings />} />
             <Route path="food" element={<CustomerFood />} />
