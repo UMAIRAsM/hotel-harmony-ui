@@ -19,7 +19,7 @@ const SignIn = () => {
       if (role === 'admin') {
         navigate('/admin/dashboard');
       } else {
-        navigate('/customer/rooms');
+        navigate('/customer');
       }
     }, 800);
   };
