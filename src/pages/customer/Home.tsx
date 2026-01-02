@@ -30,7 +30,7 @@ const CustomerHome = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/60" />
         <div className="absolute inset-0 flex flex-col justify-center px-8 md:px-12">
           <h1 className="font-heading text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
-            Welcome to Elegance
+            Welcome to The Grand Meridian
           </h1>
           <p className="text-primary-foreground/80 text-lg max-w-md">
             Experience luxury redefined. Your comfort is our priority.
