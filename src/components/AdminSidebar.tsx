@@ -46,7 +46,7 @@ const AdminSidebar = ({ className }: AdminSidebarProps) => {
         </div>
         {!collapsed && (
           <span className="font-heading text-xl font-bold text-sidebar-foreground">
-            Luxe Haven
+            The Grand Meridian
           </span>
         )}
       </div>

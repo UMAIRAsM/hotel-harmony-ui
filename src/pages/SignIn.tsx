@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -40,7 +40,7 @@ const SignIn = () => {
               <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center">
                 <Hotel className="w-7 h-7 text-accent-foreground" />
               </div>
-              <span className="font-heading text-3xl font-bold">Luxe Haven</span>
+              <span className="font-heading text-3xl font-bold">The Grand Meridian</span>
             </div>
             <h1 className="font-heading text-5xl font-bold mb-6 leading-tight">
               Experience Luxury<br />Like Never Before
@@ -59,7 +59,7 @@ const SignIn = () => {
             <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
               <Hotel className="w-6 h-6 text-primary-foreground" />
             </div>
-            <span className="font-heading text-2xl font-bold text-foreground">Luxe Haven</span>
+            <span className="font-heading text-2xl font-bold text-foreground">The Grand Meridian</span>
           </div>
 
           <Card variant="elevated" className="border-0">
@@ -131,7 +131,7 @@ const SignIn = () => {
                       <Input
                         id="admin-email"
                         type="email"
-                        placeholder="admin@luxehaven.com"
+                        placeholder="admin@grandmeridian.com"
                         className="pl-10"
                       />
                     </div>
@@ -164,9 +164,9 @@ const SignIn = () => {
               <div className="mt-6 text-center">
                 <p className="text-sm text-muted-foreground">
                   Don't have an account?{' '}
-                  <button className="text-accent hover:underline font-medium">
+                  <Link to="/signup" className="text-accent hover:underline font-medium">
                     Create one
-                  </button>
+                  </Link>
                 </p>
               </div>
             </CardContent>
