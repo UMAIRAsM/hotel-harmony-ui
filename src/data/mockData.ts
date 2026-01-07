@@ -1,4 +1,5 @@
 import { Room, FoodItem, Booking, ServiceRequest } from '@/types/hotel';
+import eggsBenedictImage from '@/assets/eggs-benedict.jpg';
 
 export const mockRooms: Room[] = [
   {
@@ -85,7 +86,7 @@ export const mockFoodItems: FoodItem[] = [
     description: 'Poached eggs with hollandaise sauce on English muffin',
     price: 18,
     category: 'breakfast',
-    image: 'https://images.unsplash.com/photo-1608039829572-9b6d2e03b47a?w=800',
+    image: eggsBenedictImage,
     available: true
   },
   {
